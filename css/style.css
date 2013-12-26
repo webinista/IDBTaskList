@@ -1,0 +1,182 @@
+body{
+	font: 14px / 1.5 'Lucida Grande','Lucida Sans',sans-serif;
+    margin:0;
+    padding: 2em 0
+}
+body > *{
+	width: 60%;
+	margin:auto;
+}
+
+form, h1{
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
+}
+
+form{
+	position: relative;
+}
+h1{
+    margin:0;
+    font-size:1.2em
+}
+
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=date],
+select,
+textarea{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+          
+   -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+           box-sizing:border-box;
+    border-radius: 5px;  
+    font:inherit;
+    text-indent:0.01em;
+    text-overflow:"";
+    line-height:1;
+    border-style: solid;
+    padding: 5px; 
+	line-height: 1;
+	border: 1px solid #ccc;
+	display: block;
+	width: 100%;
+    margin: .09em 0;
+}
+
+input[type=checkbox]{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+    background-color: #fff;
+    width: 1.5em;
+    height: 1.5em;
+    border:1px solid #bbb;
+    border-radius: 2px;
+    cursor: pointer;
+    vertical-align:bottom
+}
+input[type=checkbox]:checked{
+    background: #fff url(../imgs/check.svg) no-repeat;
+    background-size: 100% 100%;
+}
+
+input::-webkit-inner-spin-button{
+    display:none;
+}
+.txtright{text-align:right}
+.right{
+	position:absolute;
+	top: -1em;
+	right: 0;
+}
+
+label{
+	font-weight: bold;
+}
+
+button[type=submit]{
+    font:inherit;
+    background: #906;
+    border:2px solid #906;
+    color:#fff;
+    margin: .5em 0;
+    display:block;
+    border-radius:.5em;
+    white-space:nowrap
+}
+
+button[type=button]{
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius:.5em;
+    color:#03c;
+    cursor:pointer;
+    font:inherit;
+    margin: .5em 0;
+    padding:0;
+    text-decoration:underline;
+}
+[for=status]{cursor:pointer;font-style:italic}
+
+select{
+    background: url(../imgs/tri.svg) 98.5% center no-repeat, -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(230, 231, 232));
+    background: url(../imgs/tri.svg) 98.5% center no-repeat,    -moz-linear-gradient(top, rgb(255, 255, 255), rgb(230, 231, 232));
+    background: url(../imgs/tri.svg) 98.5% center no-repeat,     -ms-linear-gradient(top, rgb(255, 255, 255), rgb(230, 231, 232));
+    background: url(../imgs/tri.svg) 98.5% center no-repeat,         linear-gradient(top, rgb(255, 255, 255), rgb(230, 231, 232));
+    background-size: 10px 11px, 100% 100%;
+    padding: 5px;
+}
+
+.hidden{
+    display:none;
+}
+
+#list{
+	border:1px solid #ccc;
+	width: 100%;
+	border-collapse:collapse;
+    margin:auto;
+}
+#list thead tr{
+	background: #ECD1E3;
+}
+#list tr:nth-child(even){
+	background: #eee;
+}
+
+#list th, #list td{
+	border:1px solid #ccc;
+	width: 100%;
+	text-align:left;
+	padding: .5em;
+}
+
+#list th{white-space: nowrap;}
+
+#list tbody td:first-child{
+	color:#03c;
+	text-decoration: underline;
+	cursor:pointer;
+}
+#list td:nth-child(2){
+	text-align: right;
+}
+
+#list td:last-child, #list td:nth-child(3){
+	text-align: center;
+}
+
+#list th::after{
+	content:'';
+	display:inline-block;
+	background:transparent;
+	border-top: 8px solid transparent;
+    border-left: 8px solid transparent; 
+    border-right: 8px solid transparent; 
+	width:0;
+	height:0;
+	margin-left: 1em;
+}
+
+#list th.active::after{
+	border-top: 8px solid #333;
+}
+
+#list th.active.asc::after{
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	     -o-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}

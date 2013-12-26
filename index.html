@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>IndexedDB Task List</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+   
+   <section id="tasklist">
+
+		<h1>To-do List</h1>
+   		<form id="search">
+       	 	<input type="search" id="find" name="find">
+        	<button type="submit" id="submit">Search</button>
+        	<button type="button" id="showadd" data-show="#addnew" data-hide="#tasklist">Add new</button>
+   	 	</form>   
+		<table id="list" class="hidden">
+			<thead>
+				<tr>
+					<th>Task</th>
+					<th>Due</th>
+					<th>Priority</th>
+					<th>Complete</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+    </section>
+    
+    <form id="addnew" class="hidden" data-mode="add"> 
+        <p>
+            <input type="hidden" name="key" id="key" value="">
+            <label for="task">What do you need to do?</label>
+            <span class="right">
+            <button type="button" data-show="#tasklist" data-hide="#addnew" id="viewall">View all tasks</button>
+            </span>
+            <input type="text" name="task" id="task" value="" required>
+        </p>
+        <p class="txtright">
+            <input type="checkbox" name="status" id="status"><label for="status">Completed?</label>
+        </p>
+       
+        <p>
+            <label for="start">Start date:</label>
+            <input type="date" id="start" name="start" value="">
+        </p>
+        <p>
+            <label for="due">Due date:</label>
+            <input type="date" id="due" name="due" value="">
+        </p>
+        
+        <p>
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="0">None</option>
+                <option value="1">1 - High</option>
+                <option value="2">2</option>
+                <option value="3">3 - Medium</option>
+                <option value="4">4</option>
+                <option value="5">5 - Low</option>
+            </select>
+        </p>
+        
+        <p>
+            <label for="notes">Task notes</label> 
+            <textarea id="notes" name="notes" cols="30" rows="3"></textarea>
+            <button type="submit" id="submit">Save entry</button>
+            <button type="button" id="delete">Delete entry</button>
+        </p>
+    </form>
+
+	<script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/todolist.js"></script>
+</body>
+</html>
