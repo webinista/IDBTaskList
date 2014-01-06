@@ -1,11 +1,17 @@
 body{
 	font: 14px / 1.5 'Lucida Grande','Lucida Sans',sans-serif;
     margin:0;
-    padding: 2em 0
+    padding: 0 0 2em;
 }
-body > *{
+body > section, body > form{
 	width: 60%;
 	margin:auto;
+}
+header{
+	margin:0 0 2rem 0;
+	background: #eee;
+	border-bottom:1px groove #eee;
+	padding: .1rem 1rem;
 }
 
 form, h1{
