@@ -1,19 +1,30 @@
 body{
-	font: 14px / 1.5 'Lucida Grande','Lucida Sans',sans-serif;
+	font: 14px / 1.5 'Helvetica Neue',helvetica,arial,sans-serif;
     margin:0;
     padding: 0 0 2em;
+    color: #222
 }
 body > section, body > form{
 	width: 60%;
 	margin:auto;
 }
-header{
+a{
+	color: inherit;
+}
+header, footer{
 	margin:0 0 2rem 0;
+	padding: .1rem 1.5rem;
+}
+header{
 	background: #eee;
 	border-bottom:1px groove #eee;
-	padding: .1rem 1rem;
 }
-
+footer{
+	font-size: .8rem;
+	color: #666;
+	margin-top:5rem;
+	text-align: right;
+}
 form, h1{
     -webkit-box-sizing:border-box;
        -moz-box-sizing:border-box;
