@@ -25,9 +25,17 @@ Array.prototype.map.call(triggers, function (b) {
             hide(b.dataset.hide);
         }
         window.location.hash = '';
-        /* Reset add new form because some browsers like 
-           to hold on to that form data. */
+        /* 
+        Reset add new form because some browsers like 
+        to hold on to that form data. 
+        */
         addnew.reset();
+        
+        /* 
+        Reset the key value, since reset() doesn't work on 
+        hidden fields 
+        */
+        addnew.key.value = '';
         
         /* Set default start, due dates */
         addnew.start.value = today;
@@ -89,7 +97,7 @@ init = function () {
             transaction.createIndex('status', 'status');
             transaction.createIndex('due', 'due');
             transaction.createIndex('start', 'start');
-        }
+        }	
     };
 
     idb.onsuccess = function (event) {

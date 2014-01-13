@@ -4,20 +4,21 @@ body{
     padding: 0 0 2em;
     color: #222
 }
-body > section, body > form{
+body > section, body > form, footer{
 	width: 60%;
 	margin:auto;
 }
 a{
 	color: inherit;
 }
-header, footer{
+header{
 	margin:0 0 2rem 0;
 	padding: .1rem 1.5rem;
 }
 header{
 	background: #eee;
 	border-bottom:1px groove #eee;
+	height: 5px;
 }
 footer{
 	font-size: .8rem;

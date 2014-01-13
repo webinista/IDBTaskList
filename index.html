@@ -8,15 +8,15 @@
 <body>
 
 <header>
-	<p><a href="https://github.com/webinista/IDBTaskList">View the repo</a></p>
+	<div><a href="https://github.com/webinista/IDBTaskList"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a></div>
 </header>
    
    <section id="tasklist">
 		<h1>To-do List</h1>
    		<form id="search">
-       	 	<input type="search" id="find" name="find">
+       	 	<div><input type="search" id="find" name="find">
         	<button type="submit" id="submit">Search</button>
-        	<button type="button" id="showadd" data-show="#addnew" data-hide="#tasklist">Add new</button>
+        	<button type="button" id="showadd" data-show="#addnew" data-hide="#tasklist">Add new</button></div>
    	 	</form>   
 		<table id="list" class="hidden">
 			<thead>
@@ -32,28 +32,26 @@
     </section>
     
     <form id="addnew" class="hidden" data-mode="add"> 
-        <p>
+        <div>
             <input type="hidden" name="key" id="key" value="">
-            <label for="task">What do you need to do?</label>
-            <span class="right">
-            <button type="button" data-show="#tasklist" data-hide="#addnew" id="viewall">View all tasks</button>
-            </span>
+            <label for="task">What do you need to do? (required)</label>
+           <button type="button" class="right" data-show="#tasklist" data-hide="#addnew" id="viewall">View all tasks</button>
             <input type="text" name="task" id="task" value="" required>
-        </p>
+        </div>
         <p class="txtright">
             <input type="checkbox" name="status" id="status"><label for="status">Completed?</label>
-        </p>
+        </div>
        
-        <p>
+        <div>
             <label for="start">Start date:</label>
             <input type="date" id="start" name="start" value="">
-        </p>
-        <p>
+        </div>
+        <div>
             <label for="due">Due date:</label>
             <input type="date" id="due" name="due" value="">
-        </p>
+        </div>
         
-        <p>
+        <div>
             <label for="priority">Priority:</label>
             <select id="priority" name="priority">
                 <option value="0">None</option>
@@ -63,14 +61,14 @@
                 <option value="4">4</option>
                 <option value="5">5 - Low</option>
             </select>
-        </p>
+        </div>
         
-        <p>
+        <div>
             <label for="notes">Task notes</label> 
             <textarea id="notes" name="notes" cols="30" rows="3"></textarea>
             <button type="submit" id="submit">Save entry</button>
             <button type="button" id="delete">Delete entry</button>
-        </p>
+        </div>
     </form>
 
 	<footer>
