@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+index.html
+
+css/style.css
+images/check.svg
+images/tri.svg
+scripts/IndexedDBShim.min.js	
+scripts/todolist.js		
+scripts/utils.js
